@@ -1,0 +1,56 @@
+body {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  color: rgb(102, 102, 170);
+  font-size: 3rem;
+}
+
+ul {
+  padding: 0.5rem;
+}
+li {
+  color: darkblue;
+  padding-top: 3px;
+  font-size: 15px;
+  list-style-type: none;
+  display: flex;
+  gap: 1ch;
+}
+
+.notification {
+  font-size: 1.2rem;
+  padding: 1rem;
+  border-radius: 6px;
+  display: flex;
+  animation: fadeIn 0.2s ease;
+  width: fit-content;
+  pointer-events: none;
+  position: fixed;
+  left: 0.5rem;
+  bottom: 0.5rem;
+  max-width: calc(100% - 3rem);
+}
+
+.notification.error {
+  color: rgb(132, 21, 43);
+  background-color: rgb(233, 173, 185);
+}
+.notification.success {
+  color: rgb(29, 88, 69);
+  background-color: rgb(187, 214, 206);
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translateY(100);
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
